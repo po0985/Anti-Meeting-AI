@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { BarChart2, Clock, Home, LogOut, PlusCircle, Zap } from "lucide-react";
+import { BarChart2, Clock, Home, LifeBuoy, LogOut, PlusCircle, Zap } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { href: "/dashboard", label: "Dashboard", icon: Home },
   { href: "/analyze", label: "New Analysis", icon: PlusCircle },
   { href: "/history", label: "History", icon: Clock },
+  { href: "/itsm-copilot", label: "IT Support Copilot", icon: LifeBuoy },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {

@@ -47,6 +47,19 @@ export type MeetingArchetype =
   | "Circular Debate"
   | "Ghost Meeting";
 
+export interface ITSMReportRecord {
+  id: string;
+  user_id: string;
+  created_at: string;
+  title: string;
+  report_language: "ru" | "en";
+  company_context: string;
+  ticket_count: number;
+  warnings: string[];
+  stats: import("@/lib/itsm-schema").ITSMStats;
+  report: import("@/lib/itsm-schema").ITSMReport;
+}
+
 export interface DashboardStats {
   total_analyses: number;
   total_hours_wasted: number;
